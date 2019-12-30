@@ -24,7 +24,7 @@ export default class BadgeForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="lastName">First Name</label>
+                        <label htmlFor="lastName">Last Name</label>
                         <input
                             onChange={this.props.onChange}
                             className="form-control"

@@ -3,9 +3,6 @@ import "./styles/Badge.css";
 import confLogo from "../images/badge-header.svg";
 
 export default class Badge extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="Badge">
