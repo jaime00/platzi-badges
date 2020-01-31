@@ -1,16 +1,11 @@
 import React, { Component } from "react";
 
 export default class BadgeForm extends Component {
-    
-    handleSubmit = e => e.preventDefault();
-
-    handleClick = () => console.log("click");
-
     render() {
         return (
             <div>
                 <h1>New Attendant</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.props.onSubmit}>
                     <div className="form-group">
                         <label htmlFor="firstName">First Name</label>
                         <input
@@ -72,11 +67,12 @@ export default class BadgeForm extends Component {
                         />
                     </div>
                     <button
-                        onClick={this.handleClick}
+                        type="submit"
                         className="btn btn-primary"
                     >
                         Save
                     </button>
+                    {(this.props.error) && <p className="text-danger pt-2">{this.props.error.message}</p>}
                 </form>
             </div>
         );

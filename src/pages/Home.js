@@ -13,10 +13,11 @@ export default function Home() {
                 display: "flex",
                 background: `url(${Background}), #1B1B25 repeat`,
                 alignItems: "center",
-                minHeight: "500px"
-            }}
-        >
-            {/* background: url('../../images/stars.svg'), #1B1B25; */}
+                minHeight: "100vh"
+            }}>
+            >
+
+                {/* background: url('../../images/stars.svg'), #1B1B25; */}
             <div className="container p-4">
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-6">

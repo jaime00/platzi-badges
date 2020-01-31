@@ -6,6 +6,8 @@ import Badges from "./pages/Badges";
 import Home from "./pages/Home";
 
 function App() {
+    // console.log('%cStop!', 'color: blue;font-size:2.5rem;font-weight:bold;');
+    // console.log('%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Platzi feature or "hack" someone\'s account, it is a scam and will give them access to your Platzi account.', 'font-size:1.25rem;line-height:1.1;margin-top:.5em');
     return (
         <BrowserRouter>
             <Layout>

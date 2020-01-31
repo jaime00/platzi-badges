@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import "./styles/BadgesList.css";
-
+import { Link } from 'react-router-dom'
+import Gravatar from "./Gravatar";
 export default class BadgesList extends Component {
     render() {
-        //     id: "0",
-        //     firstName: "Freda",
-        //     lastName: "Grady",
-        //     email: "Leann_Berge@gmail.com",
-        //     jobTitle: "Legacy Brand Director",
-        //     twitter: "FredaGrady22221-7573",
-        //     avatarUrl:
-        //         "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
-        //
+        if (this.props.badges.length === 0) return <div className="text-center m-5">
+            <h3>Not badges were found</h3>
+            <Link className="btn btn-primary" to="/badges/new">
+                Create new badge
+            </Link>
+        </div>
+
         return (
             <>
                 {this.props.badges.map(badge => {
@@ -19,11 +18,7 @@ export default class BadgesList extends Component {
                         <div key={badge.id} className="Badge__element">
                             <div className="row">
                                 <div className="col-12 col-sm-3">
-                                    <img
-                                        className="iconHero"
-                                        src={badge.avatarUrl}
-                                        alt={badge.firstName + badge.lastName}
-                                    />
+                                    <Gravatar email={badge.email}/>
                                 </div>
                                 <div className="end col-12 col-sm-9">
                                     <h6>
